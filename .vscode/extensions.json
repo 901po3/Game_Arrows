@@ -1,5 +1,7 @@
 {
     "recommendations": [
-      "visualstudiotoolsforunity.vstuc"
+        "visualstudiotoolsforunity.vstuc",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
     ]
 }

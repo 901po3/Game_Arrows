@@ -1,4 +1,7 @@
 # Unity .gitignore - https://github.com/github/gitignore/blob/main/Unity.gitignore
+# CoderGamester MCP Unity (cloned for server - installed via Unity Package Manager)
+.cursor/mcp-unity/
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
