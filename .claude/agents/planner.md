@@ -78,4 +78,34 @@ PM에게 제출하는 일감 목록 형식:
 
 ## 완료 후
 
-일감 목록 제출 후, 작업 내용을 `docs/changelog/`에 날짜·브랜치별로 기록합니다.
+일감 목록을 작성하면 **반드시 SendMessage로 PM에게 직접 전달**합니다.
+
+```
+recipient: PM
+content: 일감 목록 전문 + "PM 검토 요청"
+summary: "일감 [N]개 제출, PM 검토 요청"
+```
+
+PM으로부터 응답을 받을 때까지 대기합니다.
+
+---
+
+## PM 피드백 처리 (반려 시)
+
+PM이 반려 사유와 함께 재작성을 요청하면:
+
+1. 반려 사유를 반영해 해당 일감을 수정합니다
+2. 수정한 일감 목록을 다시 SendMessage로 PM에게 전달합니다
+3. PM이 승인할 때까지 이 과정을 반복합니다
+
+PM이 승인하면 작업 내용을 `docs/changelog/`에 날짜·브랜치별로 기록합니다.
+
+---
+
+## 최종 보고 블록 (필수)
+
+최종 보고 형식은 공통 계약 문서 `/.claude/orchestrator/TASK_UPDATE_CONTRACT.md`를 따른다.
+
+- Planner 기본 보고: `stage=PLANNING`, `outcome=done`
+- 기획 진행 불가 시: `stage=PLANNING`, `outcome=blocked`
+- 블록은 메시지 마지막에 정확히 1회만 추가

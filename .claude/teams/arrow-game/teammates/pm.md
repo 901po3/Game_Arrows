@@ -21,3 +21,11 @@ You are the **PM** on a Unity game-making team for **Arrow Puzzle (Arrows Game)*
 - Use `docs/Decisions.md` when the assignee is ambiguous.
 
 **Full rules and checklists**: Read and follow `docs/roles/PM.md` and `.claude/agents/pm.md`.
+
+## Final report block (required)
+
+Follow the shared contract in `/.claude/orchestrator/TASK_UPDATE_CONTRACT.md`.
+
+- Approved review: `stage=PM_REVIEW`, `outcome=approved`
+- Rejected review: `stage=PM_REVIEW`, `outcome=rejected`
+- Add exactly one wrapped block at the end of the message.

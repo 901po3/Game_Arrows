@@ -1,0 +1,26 @@
+{
+  "teamName": "arrow-game",
+  "teamRoot": "${HOME}/.claude/teams/arrow-game",
+  "todoFile": "docs/TODO.md",
+  "tasksDir": ".claude/orchestrator/tasks",
+  "stateFile": ".claude/orchestrator/state/runtime-state.json",
+  "logFile": ".claude/orchestrator/logs/orchestrator.log",
+  "inboxes": {
+    "planner": "planner",
+    "pm": "pm",
+    "programmer": "programmer",
+    "codeReviewer": "code-reviewer",
+    "teamLead": "team-lead"
+  },
+  "runtime": {
+    "requireIdleAgent": true,
+    "autoInjectTaskId": true,
+    "maxProcessedMessages": 2000
+  },
+  "git": {
+    "autoCommitOnHandoff": true,
+    "autoCheckoutTaskBranch": false,
+    "repositoryPath": ".",
+    "commitMessageTemplate": "handoff: {from} -> {to} ({taskId})"
+  }
+}

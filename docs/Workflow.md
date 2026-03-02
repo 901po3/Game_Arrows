@@ -66,3 +66,19 @@ flowchart LR
 - `docs/<설명>` — 문서만 수정 (예: `docs/update-workflow`)
 
 역할 접두 예: `planner`, `programmer`, `qa`, `pm`. Plan 리뷰어·코드 리뷰어는 주로 리뷰만 하므로 브랜치보다는 PR 코멘트로 참여.
+
+---
+
+## 5. Agent Teams 오케스트레이터(MVP)
+
+Agent Teams가 Idle 상태가 되어도 자동으로 다음 단계를 진행하려면 로컬 오케스트레이터를 상시 실행한다.
+
+- 실행 파일: `.claude/orchestrator/Orchestrator.ps1`
+- 기본 동작: `docs/TODO.md`, `team-lead inbox` 변경 이벤트를 감지해 상태 전이·재배정
+- 작업 상태 저장: `.claude/orchestrator/tasks/*.json`
+
+자동 전이를 위해, 작업 결과 보고는 `TASK_UPDATE` 공통 계약을 따른다.
+
+- 계약 문서: `.claude/orchestrator/TASK_UPDATE_CONTRACT.md`
+- 핵심: `TASK_UPDATE_BEGIN/END` 래퍼 + `task_update` JSON
+- 역할별 기본 stage/outcome 예시는 각 역할 프롬프트를 따른다.
