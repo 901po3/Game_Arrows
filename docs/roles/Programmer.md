@@ -10,6 +10,7 @@
 
 - [Workflow.md](../Workflow.md) 공통 규칙 준수: 브랜치 → Plan 작성 → Plan 리뷰어 검토 → 작업 → 문서·TODO 기록 → 코드 리뷰.
 - [code/Conventions.md](../code/Conventions.md) 및 [plan/GamePlan.md](../plan/GamePlan.md)(핵심 기능·콘텐츠)를 참고하여 구현한다. 작업 시작 전 [changelog/](../changelog/)·[plan/CurrentStructure.md](../plan/CurrentStructure.md)에서 이전 작업·현재 구조를 확인한다. **리소스**는 [resources/Resources.md](../resources/Resources.md)의 배치·네이밍 규칙과 기획 명세의 필요 리소스 목록·경로를 보고 참조·연동한다.
+- **최신 문서·API 참고**: Unity, C# 등 라이브러리/버전별 최신 문서가 필요할 때는 **Context7** MCP(upstash/context7-mcp)를 활용한다. 질문에 "use context7"를 넣거나, `resolve-library-id`·`get-library-docs` 도구로 정확한 문서를 가져와 구식 정보·환각 API를 줄인다.
 
 ---
 
