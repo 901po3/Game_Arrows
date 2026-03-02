@@ -76,6 +76,7 @@ InitTestScene*.unity*
 .claude/orchestrator/state/
 .claude/orchestrator/test-run/
 .claude/orchestrator/test-run2/
+.claude/orchestrator/scripts/*.md
 state/
 $ROOT/
 

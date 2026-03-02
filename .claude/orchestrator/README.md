@@ -91,3 +91,15 @@ powershell -ExecutionPolicy Bypass -File .\.claude\orchestrator\Orchestrator.ps1
 - 오케스트레이터는 별도 터미널에서 상시 실행
 - PM/Reviewer 프롬프트에 "작업 결과는 반드시 task_update JSON으로 보고" 규칙 추가
 - 필요 시 CI에서 `-Once`를 주기적으로 실행해 백업 안전망 구성
+
+## 자동 실행 템플릿
+
+개발자 개입을 최소화하려면 아래 표준 템플릿을 사용해 프로그래머에게 작업 지시를 전달합니다.
+
+- 템플릿 문서: `.claude/orchestrator/AUTONOMOUS_WORK_TEMPLATES.md`
+- 포함 내용: UI 작업, GameObject/Component 구성, 입력 연동, 실패 시 표준 처리
+
+## 완전 자동 실행 런북
+
+- 런북: `.claude/orchestrator/FULL_AUTONOMOUS_RUNBOOK.md`
+- MCP 실동작 점검 스크립트: `.claude/orchestrator/scripts/Test-McpUnityConnection.ps1`

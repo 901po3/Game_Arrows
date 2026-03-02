@@ -26,6 +26,54 @@
       ],
       "isBackground": true,
       "problemMatcher": []
+    },
+    {
+      "label": "orchestrator: wait report",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".\\.claude\\orchestrator\\scripts\\Wait-TaskUpdateReport.ps1",
+        "-TaskId",
+        "${input:taskId}",
+        "-TimeoutSeconds",
+        "900",
+        "-PollSeconds",
+        "2"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "orchestrator: wait report (auto-escalate)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".\\.claude\\orchestrator\\scripts\\Wait-TaskUpdateReportWithEscalation.ps1",
+        "-TaskId",
+        "${input:taskId}",
+        "-TimeoutSeconds",
+        "600",
+        "-PollSeconds",
+        "2",
+        "-EscalateOnTimeout",
+        "-EscalateOnParseError"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "taskId",
+      "type": "promptString",
+      "description": "Task ID to monitor (e.g. SMOKE-MCP-001)",
+      "default": "SMOKE-MCP-001"
     }
   ]
 }

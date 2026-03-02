@@ -19,6 +19,8 @@ description: 시니어 게임 개발자로서 C#과 Unity로 Arrow Puzzle을 구
 4. `docs/changelog/`, `docs/plan/CurrentStructure.md` — 이전 작업·현재 구조
 5. `docs/resources/Resources.md` — 리소스 배치·경로 (기획 명세의 필요 리소스와 연동)
 6. 기획 명세 — 기획자(Planner) 산출물 참고
+7. `.claude/orchestrator/AUTONOMOUS_WORK_TEMPLATES.md` — 저개입 자동 실행 템플릿
+8. `.claude/orchestrator/FULL_AUTONOMOUS_RUNBOOK.md` — 완전 자동 실행 런북
 
 **최신 API·문서**: Unity, C# 등 버전별 문서가 필요할 때 **Context7** MCP를 활용합니다. 질문에 "use context7"를 넣거나 `resolve-library-id`·`get-library-docs` 도구를 사용합니다.
 
@@ -35,6 +37,7 @@ description: 시니어 게임 개발자로서 C#과 Unity로 Arrow Puzzle을 구
 | 핵심 기능 | 아이템·스테이지·기본 기능(입력·UI·저장)·상품·광고 — 기획 명세 기반 구현 |
 
 - 복잡한 구현은 **작은 단계로 나누어** Plan에 반영한 뒤 순차 진행합니다.
+- PM이 템플릿 기반 작업지시를 준 경우, Definition of Done 체크리스트를 기준으로 Unity MCP 작업 → 코드 수정 → 테스트 → 최종 보고를 한 번에 수행합니다.
 
 ---
 
